@@ -156,21 +156,12 @@ console.log("Average Change:" +"$"+avg);
 
 // find biggest increase
 maxChange = Math.max.apply(Math, diff);
-console.log(maxChange);
+console.log('Greatest Increase in Profits:' + '' + maxChange);
 
 
 // find biggest decrease
 minChange = Math.min.apply(Math, diff);
-console.log(minChange);
+console.log('Greatest Decrease in Profits:' + '' + minChange);
 
-//var greatestInc = []
-//var max = Math.max.apply(Math, diff);
-//console.log(max);
-//for (let i = 0; i < diff.length; i++) {
-//    if (diff[i] === max && diff[i] > diff[i + 1]) {
-//        greatestInc.push(diff[i]);
-//    }
-//}
-
-//console.log('Greatest Increase: ' + greatestInc[0]);
-
+//loop through flat data concat minChange with preceding value
+// loop through again concat minChange with preceding value 
