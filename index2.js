@@ -91,7 +91,7 @@ var finances = [
 flatdata = finances.flat()
 // console.log(flatdata)
 
-// 1, check each record for typeof if String, if type is string save it in a new variable called months: 
+// 1, check each record for typeof, if type is string save it in a new variable called months: 
 
 let months = [];
 for (let i = 0; i < flatdata.length; i++) {
@@ -99,10 +99,10 @@ for (let i = 0; i < flatdata.length; i++) {
         months.push(flatdata[i]);
     }
 }
-// console.log(months);
+//console.log(months);
 console.log("Total months: " + months.length)
 
-// 2, check each record for typeof if number, if type is number save it in a new variable called netIncome: 
+// 2, check each record for typeof, if type is number save it in a new variable called netIncome: 
 
 let netIncome = [];
 for (let i = 0; i < flatdata.length; i++) {
@@ -124,8 +124,9 @@ console.log("Total: " + "$"+sum);
 
 // create a function to calculate difference between two elements
 
+// use reduce method to
 function getDifference (num1, num2) {
-    return Math.abs(num1 - num2);
+    return (num1 - num2);
 }
 
 // run function through the for loop and save result in new variable
@@ -136,16 +137,40 @@ for (i = 0; i< netIncome.length; i++) {
 }
 
 //console.log(diff);
-
 // last index is nan it needs to be removed:
 var removed = diff.pop();
 //console.log(removed);
 
-// sum the amounts
+// in order to find average, calculate total of differences:
 
-const summary = diff.reduce((partialSum, a) => partialSum + a, 0);
+
+const summary = diff.reduce((accumulator, value) => {
+    return accumulator + value;
+  }, 0);
 //console.log(summary);
 
 // calculate  average
-var avg = summary / months.length; 
+var avg = summary / months.length-1; 
 console.log("Average Change:" +"$"+avg);
+
+
+// find biggest increase
+maxChange = Math.max.apply(Math, diff);
+console.log(maxChange);
+
+
+// find biggest decrease
+minChange = Math.min.apply(Math, diff);
+console.log(minChange);
+
+//var greatestInc = []
+//var max = Math.max.apply(Math, diff);
+//console.log(max);
+//for (let i = 0; i < diff.length; i++) {
+//    if (diff[i] === max && diff[i] > diff[i + 1]) {
+//        greatestInc.push(diff[i]);
+//    }
+//}
+
+//console.log('Greatest Increase: ' + greatestInc[0]);
+
