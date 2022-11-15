@@ -87,6 +87,9 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
+// title
+console.log('Financial Analysis')
+
 // remove nested elements, convert to 1dimensional array: 
 flatdata = finances.flat()
 // console.log(flatdata)
