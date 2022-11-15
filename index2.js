@@ -87,7 +87,7 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
-// remove nested elements, convert to 1dimensional array: //
+// remove nested elements, convert to 1dimensional array: 
 flatdata = finances.flat()
 // console.log(flatdata)
 
@@ -124,7 +124,6 @@ console.log("Total: " + "$"+sum);
 
 // create a function to calculate difference between two elements
 
-// use reduce method to
 function getDifference (num1, num2) {
     return (num1 - num2);
 }
@@ -163,5 +162,5 @@ console.log('Greatest Increase in Profits:' + '' + maxChange);
 minChange = Math.min.apply(Math, diff);
 console.log('Greatest Decrease in Profits:' + '' + minChange);
 
-//loop through flat data concat minChange with preceding value
-// loop through again concat minChange with preceding value 
+
+
